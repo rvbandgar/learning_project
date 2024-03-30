@@ -110,3 +110,16 @@ class User(AbstractUser):
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["first_name"]
 
+class PracticeModel(models.Model):
+    ID=models.AutoField(primary_key=True)
+    Name=models.CharField(max_length=100,blank=True,null=True)
+
+    class Meta:
+        db_table="PracticeModel"
+        managed=False
+        ordering=['ID']
+        verbose_name_plural="PracticeModels"
+
+    def __str__(self):
+        return self.Name
+    
