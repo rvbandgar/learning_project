@@ -9,5 +9,11 @@ admin.site.register(Countrylanguage)
 
 
 class CountryAdmin:
-    list_display=('code','name','continent')
+    list_display = ("code", "name", "continent")
     list_per_page = 10
+
+
+class UserAdmin:
+    list_display = ("first_name", "last_name", "username")
+    list_per_page = 15
+    exclude = ("phone_number",)
