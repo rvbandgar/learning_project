@@ -6,3 +6,8 @@ admin.site.register(User)
 admin.site.register(City)
 admin.site.register(Country)
 admin.site.register(Countrylanguage)
+
+
+class CountryAdmin:
+    list_display=('code','name','continent')
+    list_per_page = 10
